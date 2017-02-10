@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidSenior.iml" filepath="$PROJECT_DIR$/AndroidSenior.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ystenbasemoudule/ystenbasemoudule.iml" filepath="$PROJECT_DIR$/ystenbasemoudule/ystenbasemoudule.iml" />
     </modules>
   </component>
 </project>

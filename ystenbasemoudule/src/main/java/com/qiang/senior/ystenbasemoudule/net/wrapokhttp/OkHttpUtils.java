@@ -292,8 +292,6 @@ public class OkHttpUtils {
 
             @Override
             public void onFailure(Call call, IOException e) {
-                // TODO Auto-generated method stub
-
             }
         });
 

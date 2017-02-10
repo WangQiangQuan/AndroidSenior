@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.orhanobut.logger.Logger;
 import com.qiang.senior.ystenbasemoudule.net.wrapokhttp.OkHttpUtils;
 import com.qiang.senior.ystenbasemoudule.net.wrapokhttp.callback.Callback;
 import com.qiang.senior.ystenbasemoudule.net.wrapokhttp.callback.StringCallback;
@@ -18,12 +19,14 @@ import okhttp3.OkHttpClient;
  * 分支增加的注释
  */
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "wangQ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Logger.init(TAG);
 
 //        Intent mIntent = new Intent(this, DispatchEventActivity.class);
 //        this.startActivity(mIntent);
@@ -38,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
-                Log.d(TAG, "onResponse() called with: response = [" + response + "]");
+//                Log.d(TAG, "onResponse() called with: response = [" + response + "]");
 
+                Logger.json(response);
             }
         };
         testGet(url, mActivity, callBack);

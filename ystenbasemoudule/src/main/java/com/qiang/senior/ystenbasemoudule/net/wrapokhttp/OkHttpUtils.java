@@ -199,7 +199,6 @@ public class OkHttpUtils {
                 return response.body().string();
             }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return "";
@@ -213,7 +212,6 @@ public class OkHttpUtils {
             Iterator<Map.Entry<String, String>> it = params.entrySet().iterator();
             while (it.hasNext()) {
                 Map.Entry<String, String> entry = it.next();
-                //			   System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
                 builder.add(entry.getKey(), entry.getValue());
             }
             FormBody formBody =builder.build();
@@ -223,13 +221,11 @@ public class OkHttpUtils {
                     .post(formBody)
                     .build();
             Response response = mOkHttpClient.newCall(request).execute();
-            //			Log.i("tag", "response.isSuccessful():"+response.isSuccessful());
             if (response.isSuccessful()) {
                 return response.body().string();
             }
             return null;
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return null;
         }
